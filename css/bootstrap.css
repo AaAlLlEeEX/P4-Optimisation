@@ -1435,7 +1435,6 @@ img {
 .img-responsive,
 .thumbnail a>img,
 .thumbnail>img {
-    display: block;
     max-width: 100%;
     height: auto
 }
@@ -1658,7 +1657,8 @@ mark {
 }
 
 .text-center {
-    text-align: center
+    text-align: center;
+    padding: 5px;
 }
 
 .text-justify {
@@ -2011,8 +2011,7 @@ pre code {
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px
+    margin-top: 20px;
 }
 
 .col-lg-1,
@@ -2323,6 +2322,9 @@ pre code {
     }
     .col-sm-6 {
         width: 50%
+    }
+    .col-sm-6-1 {
+        width: 100%
     }
     .col-sm-5 {
         width: 41.66666667%
@@ -3138,7 +3140,8 @@ output {
 
 .form-control {
     display: block;
-    width: 100%;
+    align-items: center;
+    width: 70%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -3225,7 +3228,7 @@ input[type=search] {
 }
 
 .form-group {
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .checkbox,
@@ -3233,7 +3236,7 @@ input[type=search] {
     position: relative;
     display: block;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .checkbox label,
@@ -3242,7 +3245,7 @@ input[type=search] {
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: 400;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .checkbox input[type=checkbox],
@@ -4222,11 +4225,6 @@ fieldset[disabled] .btn-link:hover {
     border-radius: 3px
 }
 
-.btn-block {
-    display: block;
-    width: 100%
-}
-
 .btn-block+.btn-block {
     margin-top: 5px
 }
@@ -4286,7 +4284,7 @@ tbody.collapse.in {
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-top: 4px solid\9;
+    border-top: 4px;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent
 }
@@ -4373,7 +4371,6 @@ tbody.collapse.in {
     cursor: not-allowed;
     background-color: transparent;
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
 }
 
 .open>.dropdown-menu {
@@ -4422,7 +4419,7 @@ tbody.collapse.in {
     content: "";
     border-top: 0;
     border-bottom: 4px dashed;
-    border-bottom: 4px solid\9
+    border-bottom: 4px solid;
 }
 
 .dropup .dropdown-menu,
@@ -5124,7 +5121,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
     max-height: 340px
 }
 
-@media (max-device-width:480px) and (orientation:landscape) {
+@media (max-width:480px) and (orientation:landscape) {
     .navbar-fixed-bottom .navbar-collapse,
     .navbar-fixed-top .navbar-collapse {
         max-height: 200px

@@ -28,7 +28,7 @@ a:hover {
 }
 
 .bloc {
-    width: 100%;
+    width: auto;
     clear: both;
     background: 50% 50% no-repeat;
     padding: 0 50px;
@@ -100,7 +100,7 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: #FFFFFF!important;
 }
 
 .d-bloc button:hover {
@@ -328,6 +328,24 @@ a:hover {
     font-size: 16px;
 }
 
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
 .navbar-nav .open .dropdown-menu > li > a {
     text-align: inherit;
 }
@@ -447,6 +465,7 @@ nav .caret {
 
 .btn {
     margin: 0 5px 5px 0;
+    cursor: pointer;
 }
 
 .btn.pull-right {
@@ -651,15 +670,12 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
-}
-
-.container {
-    max-width: 1000px;
+    color: black;
 }
 
 .hero-bloc-text {
-    font-size: 38px;
+    font-size: 50px;
+    text-align: center;
 }
 
 .hero-bloc-text-sub {
@@ -677,12 +693,15 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
+    text-align: center;
+    font-size: 18px;
 }
 
 .h1 {
@@ -700,6 +719,8 @@ p {
 }
 
 .social {
+    display: flex;
+    justify-content: center;
     max-width: 400px;
     margin: auto auto auto auto;
 }
@@ -723,7 +744,7 @@ h3 {
 }
 
 h1 {
-    color: #333333!important;
+    color: #FFFFFF!important;
 }
 
 h4 {
@@ -774,8 +795,12 @@ h4 {
     background-color: #F3976C;
 }
 
+.bgc-atomic-tangerine1 {
+    background-color: #BF5837;
+}
+
 .tc-white {
-    color: #333!important;
+    color: #FFFFFF!important;
 }
 
 .tc-white1 {
@@ -818,7 +843,7 @@ h4 {
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/");
 }
 
 .bg-banniere {
@@ -826,8 +851,33 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
+
+.row-2 {
+    display: block;
+    text-align: center;
+}
+
+.col-sm-6-1 {
+    display: block;
+}
+
+.col-sm-6-1 p {
+    padding: 20px;
+}
+
+.form-group {
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 17px;
+}
+
 
 @media (max-width: 1024px) {
     .bloc {
@@ -852,13 +902,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -876,10 +926,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -888,8 +935,7 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+
     }
 }
 
@@ -1030,6 +1076,15 @@ h4 {
         width: 180px;
         height: 320px;
     }
+
+    .row-2 {
+        display: block;
+    }
+
+    .col-sm-6 img {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 400px) {
